@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {%include 'cdnlines.html' %}
+
+</head>
+<style media="screen">
+    input[name]{margin-top: -10px;}
+    body{
+        background-color: rgb(116, 243, 99);
+        color: rgb(13, 11, 11);
+    }
+    .row{
+        background-color: rgb(249, 80, 246);
+        color: black;
+        margin-left: 70px;
+        margin-right: 70px;
+        
+    }
+    form{
+        padding-left: 500px;
+        padding-right: 500px;
+    }
+    label{
+        color: rgb(12, 10, 11);
+        margin-top: 7px;
+        background-color: rgb(61, 255, 70); 
+        
+    }
+    h4{
+        font-size: 30px;
+        font-family: cursive;
+        font-weight: bold;
+        padding-top: 20px;
+        padding-bottom: 40px;
+        border: 3px solid black;
+        width: 500px;
+        margin-left: 450px;
+    }
+</style>
+
+<body>
+ 
+    <div class="container-fluid">
+        <h4 class="text-center display-4" >Welcome to Registration Page</h4>
+        <div class="row">
+
+           <form method="post">
+            {%csrf_token%}
+                <label for="">Enter first-name:</label>
+                <input type="text" name="fname" class="form-control" required>
+                <br>
+                <label for="">Enter last-name:</label>
+                <input type="text" name="lname" class="form-control">
+                <br>
+                <label for="">Enter Email:</label>
+                <input type="email" name="Email" class="form-control" required>
+                <br>
+                <label for="">Enter mobile-no:</label>
+                <input type="number" name="mobile" class="form-control">
+                <br>
+                <label for="">Enter password:</label>
+                <input type="password" name="password" class="form-control" required maxlength="20" minlength="8">
+                <br>
+                <label for="">Enter confirmpassword:</label>
+                <input type="password" name="confirmpassword" class="form-control" maxlength="20" minlength="8">
+                <center>
+                    <input type="submit" value="save" class="btn btn-primary">
+                    <input type="reset" value="clear" class="btn btn-danger">
+                </center>
+            </form>
+            
+        </div>
+        
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        form{
+            width: 280px;
+            padding-top: -10px;
+        }
+        h4{
+           
+            font-size: 30px;
+            font-family: sans-serif;
+           
+        }
+        div{
+            background-color: aqua;
+            margin-top: 100px;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <div class="container">
+        <h4 class="text-center display-3" >Welcome to signup Page</h4>
+        <div>
+
+           <form method="post" >
+            {% csrf_token %}
+                <label for="">Enter user_name:</label>
+                <input type="text" name="user_name" class="form-control" required>
+                <br>
+                <label for="">Enter Email:</label>
+                <input type="email" name="email" class="form-control" required>
+                <br>
+                <label for="">Enter password:</label>
+                <input type="password" name="password" class="form-control" required>
+                <br>
+                <label for="">Enter confirm_password:</label>
+                <input type="password" name="confirm_password" class="form-control" required>
+                <br><br>
+                <center>
+                    <input type="submit" value="save" class="btn btn-success">
+                    <input type="reset" value="clear" class="btn btn-primary">
+                </center>
+            </form>
+            
+        </div>
+        
+    </div>
+    </center>
+</body>
+</html>

@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>my-project</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        #id1{
+            flex-direction: row;
+            float: right;
+        }
+        img{
+            margin-top: 4px;
+            padding-bottom: 3px;
+        }
+        ul li{
+            font-size: 17px;
+            font-weight: bold;
+            font-family: sans-serif;
+        }
+        
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="#" ><img src="{% static 'images/img.png' %}" width="90px" height="55px" style="border-radius: 10px;">&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            </div>
+            
+            <ul class="nav navbar-nav">
+                
+                <li><a href="homepage">homepage</a></li>
+                <li><a href="accessories">accessories</a></li>
+                <li><a href="services">elctronics</a></li>
+                <li><a href="dresses">dresses</a></li>
+                <li><a href="contact">contact</a></li>
+          
+            </ul>
+            <ul class="nav navbar-nav" id="id1">
+                <li><a href="loginpage" style="background-color: rgb(183, 236, 236); color: rgb(7, 7, 7); border: 5px solid rgb(35, 34, 34); border-radius: 38px;">loginpage</a></li>
+                <li><a href="signupage" style="background-color: rgb(183, 236, 236); color: rgb(7, 7, 7); border: 5px solid rgb(35, 34, 34); border-radius: 38px;">signuppage</a></li>
+
+            </ul>
+        </div>
+    </nav>
+</body>
+</html>

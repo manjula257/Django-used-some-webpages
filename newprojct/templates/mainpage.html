@@ -1,0 +1,33 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title></title>
+</head>
+<style media="screen">
+.jumbotron{
+    margin: 20px 300px;
+}
+h1{
+    margin-top:70px;
+}
+body{
+    background-color: aqua;
+}
+h1{
+    text-shadow:0px opx 5px red,0px 0px 10px blue;
+}
+</style>
+<body>
+<h1 class="text-center text-white display-4 font weight-bold"> EmployeeData</h1>
+<div class="jumbotron text-center">
+<a class="mx-4 btn btn-success" href={% url 'hyderabad' %}>Hyderabad</a>
+<a class="mx-4 btn btn-primary" href={% url 'banglore' %}>Banglore</a>
+<a class="mx-4 btn btn-warning" href={% url 'chennai' %}>Chennai</a>
+<a class="mx-4 btn btn-danger" href={% url 'pune' %}>pune</a>
+</div>
+</body>
+</html>

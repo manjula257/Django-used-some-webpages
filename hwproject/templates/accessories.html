@@ -1,0 +1,111 @@
+{% extends 'base.html'%}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    {% include 'cdnlines.html' %}
+    <title></title>
+    <style>
+        .col-md-3{
+            width: "100%";
+            height: "100%";
+            overflow: hidden;
+        
+        }
+        
+    </style>
+  </head>
+  <body>
+    {% block content %}
+    <center><h1 class="text-center font-family font-size" >Welcome to Fashion-accessories page 🛒💍🎸</h1></center>
+    <!--<div class="header"><img src="{% static 'images/gallery.png' %}" height=70px, width=1500px class="img-thumbnail" ></div>-->
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-3">
+            <img src="{% static 'images/1.jpeg' %}" class="img-thumbnail">
+                <h3>product_name:jewellery set</h3>
+                <h3>price:500rs</h3>
+                <center>
+                    <input type="submit" value="Buy"  class="btn btn-success">
+                    <input type="reset" value="Share" class="btn btn-primary">
+                </center>
+          </div>
+
+          <div class="col-md-3">
+            <img src="{% static 'images/2.jpg' %}" class="img-thumbnail">
+                <h3>product_name:hair clips-set</h3>
+                <h3>price:350rs</h3>
+                <center>
+                    <input type="submit" value="Buy" class="btn btn-success">
+                    <input type="reset" value="Share" class="btn btn-primary">
+                </center>
+          </div>
+
+          <div class="col-md-3">
+            <img src="{% static 'images/3.jpg' %}" class="img-thumbnail">
+                <h3>product_name:handbag-kit</h3>
+                <h3>price:700rs</h3>
+                <center>
+                    <input type="submit" value="Buy" class="btn btn-success">
+                    <input type="reset" value="Share" class="btn btn-primary">
+                </center>
+          </div>
+
+          <div class="col-md-3">
+            <img src="{% static 'images/4.jpg' %}" class="img-thumbnail">
+                <h3>product_name:Trendy-set</h3>
+                <h3>price:500rs</h3>
+                <center>
+                    <input type="submit" value="Buy" class="btn btn-success">
+                    <input type="reset" value="Share" class="btn btn-primary">
+                </center>
+          </div>
+        </div>
+    <!----------------------------------------------------------------------------------------------->  
+        <div class="row">
+          <div class="col-md-3">
+            <img src="{% static 'images/5.jpeg' %}" class="img-thumbnail">
+                <h3>product_name:hand clutch-wallet</h3>
+                <h3>price:250rs</h3>
+                <center>
+                    <input type="submit" value="Buy" class="btn btn-success">
+                    <input type="reset" value="Share" class="btn btn-primary">
+                </center>
+          </div>
+
+          <div class="col-md-3">
+            <img src="{% static 'images/6.jpg' %}" class="img-thumbnail">
+                <h3>product_name:style-neckless</h3>
+                <h3>price:500rs</h3>
+                <center>
+                    <input type="submit" value="Buy" class="btn btn-success">
+                    <input type="reset" value="Share" class="btn btn-primary">
+                </center>
+          </div>
+
+          <div class="col-md-3">
+            <img src="{% static 'images/7.jpg' %}"  class="img-thumbnail">
+                <h3>product_name:stylish-rings</h3>
+                <h3>price:500rs</h3>
+                <center>
+                    <input type="submit" value="Buy" class="btn btn-success">
+                    <input type="reset" value="Share" class="btn btn-primary">
+                </center>
+          </div>
+
+          <div class="col-md-3">
+            <img src="{% static 'images/8.jpeg' %}" class="img-thumbnail">
+                <h3>product_name:simple-set</h3>
+                <h3>price:400rs</h3>
+                <center>
+                    <input type="submit" value="Buy" class="btn btn-success">
+                    <input type="reset" value="Share" class="btn btn-primary">
+                </center>
+          </div>
+        </div>
+      </div>
+      
+    {% endblock %}
+  </body>
+</html>

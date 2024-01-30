@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>image uploading form</h1>
+        <form action="{% url 'imageupload' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Field</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><label for="imgname">Image Name:</label></td>
+                    <td><input type="text" name="imgname" id="imgname"></td>
+                </tr>
+                <tr>
+                    <td><label for="image">Upload Image:</label></td>
+                    <td><input type="file" name="image" id="image"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="Upload"></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        </form>
+    </center>
+</body>
+</html>

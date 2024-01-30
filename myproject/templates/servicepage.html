@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    {% include 'cdnlines.html' %}
+    <title></title>
+  </head>
+  <body>
+    {% block content %}
+    <img src="{% static 'images/services.png' %}" height=100%, width=100% class="img-thumbnail">
+    <table class="table table-bordered text-center">
+      <thead class="bg-success text-white">
+        <tr>
+          <th>course_name</th>
+          <th>duration</th>
+          <th>fee</th>
+          <th>start_date</th>
+          <th>timing</th>
+          <th>trainer_name</th>
+          <th>trainer_experience</th>
+          <th>training_mode</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for course in courses %}
+    <tr>
+      <td>{{ course.course_name }}</td>
+      <td>{{ course.duration }}</td>
+      <td>{{ course.fee }}</td>
+      <td>{{ course.start_date }}</td>
+      <td>{{ course.timing }}</td>
+      <td>{{ course.trainer_name }}</td>
+      <td>{{ course.trainer_experience }}</td>
+      <td>{{ course.training_mode }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+    <div class="container-fluid">
+      <h2 class="text-center">Training Mode</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <img src="{% static 'images/offline.jpg' %}" height=100%, width=100% class="img-thumbnail">
+          <h4 class="text-center">Offline Training</h4>
+            </div>
+            <div class="col-md-4">
+              <img src="{% static 'images/online.jpeg' %}" height=100%, width=100% class="img-thumbnail">
+              <h4 class="text-center">Online Training</h4>
+        </div>
+        <div class="col-md-4">
+          <img src="{% static 'images/offline_online.jpg' %}" height=100%, width=100% class="img-thumbnail">
+          <h4 class="text-center">offline_Online Training</h4>
+    </div>
+    </div>
+{% endblock %}
+  </body>
+</html>

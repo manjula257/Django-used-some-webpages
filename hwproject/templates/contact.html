@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contactpage</title>
+    {% include 'cdnlines.html' %}
+</head>
+<body>
+    {% block content %}
+    {% csrf_token %}
+    <center>
+    <h1>If u have any queries please fill the below form</h1>
+    <br>
+    <h4> Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="name" placeholder="write ur good name"></h4>
+    <h4> Mobile-No:<input type="number" name="number" placeholder="write ur mobile number"></h4>
+    <h4 >Any Queries:</h4>
+    <textarea name="text" id="" cols="30" rows="5" placeholder="Write ur queries"></textarea><br>
+    <br>
+    <center>
+        <input type="reset" value="submit" class="btn btn-primary">
+    </center>
+    </center>
+    {% endblock%}
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {%include 'cdnlines.html' %}
+
+</head>
+<style media="screen">
+    input[name]{margin-top: -10px;}
+    div{
+        background-color: rgb(134, 207, 236);
+        color: rgb(13, 11, 11);
+    }
+    form{
+        padding-left: 500px;
+        padding-right: 500px;
+    }
+</style>
+
+<body>
+ 
+    <div class="container-fluid">
+        <h4 class="text-center display-4" >Welcome to django class</h4>
+        <div class="row">
+       
+
+           <form method="post" class="border px-4 py-4 shadow lg">
+            {%csrf_token%}
+                <label for="">Enter first-name:</label>
+                <input type="text" name="fname" class="form-control">
+                <br>
+                <label for="">Enter last-name:</label>
+                <input type="text" name="lname" class="form-control">
+                <br>
+                <label for="">Enter Email:</label>
+                <input type="email" name="Email" class="form-control">
+                <br>
+                <label for="">Course name:</label>
+                <input type="text" name="course" class="form-control">
+                <br>
+                <label for="">Enter ur location:</label>
+                <input type="text" name="location" class="form-control">
+                <br>
+                <label for="">Enter mobile-no:</label>
+                <input type="number" name="mobile" class="form-control">
+                <center>
+                    <input type="submit" value="save" class="btn btn-success">
+                    <input type="reset" value="clear" class="btn btn-primary">
+                </center>
+            </form>
+            
+        </div>
+        
+    </div>
+
+</body>
+
+</html>

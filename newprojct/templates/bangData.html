@@ -1,0 +1,89 @@
+{% load static %}
+<html>
+  <head>
+    {% include 'cdnlines.html' %}
+    <title></title>
+  </head>
+  <body>
+    {% include 'navbar.html' %}
+    <div class="container=fluid">
+      <h2 class="text-center display-4 font-weight-bold">Banglore Famous Things</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <img src="{% static 'images/4.jpg' %}" style="height:100%; width:100%" class="img-thumbnail">
+        </div>
+        <div class="col-md-4">
+          <img src="{% static 'images/5.jpg' %}" style="height:100%; width:100%" class="img-thumbnail">
+        </div>
+        <div class="col-md-4">
+          <img src="{% static 'images/3.jpg' %}" style="height:100%; width:100%" class="img-thumbnail">
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3 text-center">
+          <a href="{% url 'mainpage' %}" class="btn btn-outline-success mt-2">Mainpage</a>
+        </div>
+        <div class="col-md-6">
+          <h1 class="text-center display-5">Banglore Employee Information</h1>
+        </div>
+        <div class="col-md-3 text-center">
+          <a href="{% url 'banglore' %}" class="btn btn-outline-primary mt-2">Banglore</a>
+
+        </div>
+      </div>
+    </div>
+
+        <div class="container">
+          <div class="row text-center">
+              <div class="offset-mid-4 col-mid-4">
+                <from method="POST">
+                  {% csrf_token %}
+                  <input type="text" name="com">
+                  <input type="submit" value="search">
+                </from>
+              </div>
+            </div>
+
+
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-12">
+                  {% if bangData %}
+                  <table class="table text-center table-bordered">
+                    <thead class="big success text-white">
+                      <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Salary</th>
+                        <th>Email</th>
+                        <th>Company</th>
+                        <th>City</th>
+                        <th>Address</th>
+                      </tr>
+                    </thead>
+     <tbody class="bg-dark text-white">
+       {% for i in  bangData %}
+       <tr>
+         <td>{{i.first_name }}</td>
+          <td>{{i.last_name }}</td>
+          <td>{{i.salary }}</td>
+           <td>{{i.email }}</td>
+           <td>{{i.company }}</td>
+            <td>{{i.city }}</td>
+            <td>{{i.address }}</td>
+       </tr>
+             {% endfor %}
+           </tbody>
+      </table>
+      {% else %}
+
+      <h3>Employees Data is not available</h3>
+
+      {% endif %}
+      </div>
+      </div>
+   </div>
+  </body>
+</html>
